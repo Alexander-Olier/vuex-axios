@@ -26,12 +26,12 @@ header .logo a {
   font-size: 20px;
   font-weight: lighter;
   text-transform: uppercase;
-  background-color: #000;
+  background-color: rgb(99, 99, 99);
   color: white;
   padding: 5px
 }
 header .logo a span {
-  background-color: rgb(104, 43, 40);
+  background-color: rgb(40, 66, 104);
   color: #fff;
   font-size: 25px;
   font-weight: bold;
