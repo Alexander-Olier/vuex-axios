@@ -1,8 +1,8 @@
 <template>
   <div>
-    <header :class="{ 'scrolled-nav': scrollPosition }">
+    <header :class="{ 'scrolledg-nav': scrollPosition }">
       <div class="logo" v-show="!mobile">
-        <router-link to="/">Logo</router-link>
+        <router-link to="/"><span>Vue</span>x</router-link>
       </div>
       <nav>
         <ul v-show="!mobile">

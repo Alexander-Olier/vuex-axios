@@ -1,27 +1,37 @@
 <template>
-  <router-link class="card" :to="{ path: '/states/' + this.state.id }">
-    <div class="flex">
-      <div class="user">
-        <div class="flex">
-          <div class='img-user'><fa :icon="['fas', 'user']" /> </div>
-          <h4>Juanito</h4>
+  <div v-for="post in getterPosts" :key="post.id">
+    <div class="card">
+      <div class="flex">
+        <div class="user">
+          <div class="flex">
+            <div class="img-user"><fa :icon="['fas', 'user']" /></div>
+            <h4>Juanito</h4>
           </div>
         </div>
-      <div class="icon"><a><fa :icon="['fas', 'ellipsis-vertical']"/> </a></div>
+        <div class="icon">
+          <a><fa :icon="['fas', 'ellipsis-vertical']" /> </a>
+        </div>
+      </div>
+      <router-link class="content" :to="{ path: '/posts/' + post.id }">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.body }}</p>
+      </router-link>
     </div>
-    <div class="content">
-     <h3> {{state.title}}</h3>
-     <p>{{state.body}}</p>
-    </div>
-  </router-link>
+  </div>
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
-  props: {
-    state: Object,
+  computed: {
+    getterPosts() {
+      return this.$store.getters.allPosts;
+    },
+    posts() {
+      return this.$store.state.posts;
+    },
+  },
+  mounted() {
+    this.$store.dispatch("getAllPosts");
   },
 };
 </script>

@@ -8,7 +8,10 @@ const apiClient = axios.create({
   },
 });
 export default {
-    getAllStates(){
-        return apiClient.get('/posts')
-    }
-}
+  getAllStates() {
+    return apiClient.get("/posts");
+  },
+  getAllUser(){
+    return apiClient.get('/users')
+  }
+};

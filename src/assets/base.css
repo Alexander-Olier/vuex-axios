@@ -22,6 +22,22 @@ header {
 header .logo {
   margin: auto 0 auto 10px;
 }
+header .logo a {
+  font-size: 20px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  background-color: #000;
+  color: white;
+  padding: 5px
+}
+header .logo a span {
+  background-color: rgb(104, 43, 40);
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  margin:5px;
+}
 header nav {
   margin: auto;
 }
@@ -32,7 +48,7 @@ header nav ul {
 
 header nav ul a {
   margin: 10px;
-  color:#000;
+  color: #000;
 }
 
 header nav ul a:hover {
@@ -63,7 +79,8 @@ header .users img {
   width: 60%;
   margin: auto;
   background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;}
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
 .filter .cont-form form input {
   width: 80%;
   height: 50px;
@@ -129,13 +146,13 @@ a {
 .flex h4 {
   color: rgb(88, 136, 172);
 }
-.content {
-  margin: 5px;
-}
+
 .content h3 {
   color: #000;
   font-weight: 500;
+  margin: 5px;
 }
 .content p {
   font-weight: lighter;
+  margin: 5px;
 }
